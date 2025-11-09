@@ -1,14 +1,3 @@
-// ▼▼▼ 以下書き換え ▼▼▼
-const firebaseConfig = {
-    apiKey: "AIzaSyDv36chiOtJ00JA1dEjHvWIuPI7ml_uAsQ",
-    authDomain: "channel-d18d8.firebaseapp.com",
-    projectId: "channel-d18d8",
-    storageBucket: "channel-d18d8.firebasestorage.app",
-    messagingSenderId: "689726256579",
-    appId: "1:689726256579:web:f2bd9f932900f93806f976",
-    measurementId: "G-FC6Y0MYVKJ"
-  };
-// ▲▲▲ ここまで ▲▲▲
 
 // Firebaseの初期化
 firebase.initializeApp(firebaseConfig);
@@ -68,4 +57,5 @@ database.ref('posts').on('child_added', (snapshot) => {
 // XSS対策のための簡易的なサニタイズ関数
 function sanitize(str) {
     return str.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
 }
